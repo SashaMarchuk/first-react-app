@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -17,7 +18,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "create": "npx generate-react-cli component ",
-    "create:p": "npx generate-react-cli component --type=page"
+    "create:p": "npx generate-react-cli component --type=page",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json,scss}'"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.18.0",
     "sass": "^1.53.0"
   }
 }
