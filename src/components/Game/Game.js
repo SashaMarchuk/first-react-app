@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Board from '../Board/Board';
 import HistoryList from '../HistoryList/HistoryList';
 import './Game.scss';
@@ -100,7 +100,11 @@ const Game = () => {
   return (
     <div className="Game">
       <div className="Game-board">
-        <Board board={board} move={doMove} />
+        <Board
+          board={board}
+          move={doMove}
+          lastElHistory={step - 1 >= 0 && history[step - 1]}
+        />
       </div>
 
       <div className="Game-info">

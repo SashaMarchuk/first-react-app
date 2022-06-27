@@ -1,12 +1,12 @@
 import React from 'react';
 import './Square.scss';
 
-const Square = ({ value, positionI, positionJ, move }) => {
+const Square = ({ value, positionI, positionJ, move, last }) => {
   return (
     <button
       disabled={value}
       onClick={() => move(positionI, positionJ)}
-      className="Square"
+      className={`Square ${!!value && 'active'} ${!!last && 'last'}`}
     >
       {value}
     </button>

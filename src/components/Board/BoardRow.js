@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Board.scss';
 import Square from '../Square/Square';
 
-const BoardRow = ({ move, elemArrI, positionI }) => (
+const BoardRow = ({ move, elemArrI, positionI, lastElHistory }) => (
   <div className="Board-row">
     {elemArrI.map((elemArrJ, positionJ) => (
       <Square
@@ -12,6 +12,10 @@ const BoardRow = ({ move, elemArrI, positionI }) => (
         positionJ={positionJ}
         move={move}
         key={positionJ}
+        last={
+          positionJ === lastElHistory?.positionJ &&
+          positionI === lastElHistory?.positionI
+        }
       />
     ))}
   </div>

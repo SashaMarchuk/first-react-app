@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Board.scss';
 import BoardRow from './BoardRow';
 
-const Board = ({ board, move }) => {
+const Board = ({ board, move, lastElHistory }) => {
   return (
     <div className="Board">
       {board.map((elemArrI, positionI) => (
@@ -12,6 +12,7 @@ const Board = ({ board, move }) => {
           elemArrI={elemArrI}
           positionI={positionI}
           key={positionI}
+          lastElHistory={lastElHistory}
         />
       ))}
     </div>
