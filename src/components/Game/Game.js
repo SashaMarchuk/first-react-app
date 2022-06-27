@@ -26,13 +26,20 @@ const Game = () => {
 
   useEffect(() => {
     const newStep = calcBoardStep(board);
+    console.log('newStep: ', newStep);
 
     const moveId = getMoveId(newStep);
     const prevMoveId = getMoveId(step);
 
     const winner = calculateWinner(board, boardSize);
 
-    setStatus(winner ? `Winner: ${prevMoveId}` : `Next player: ${moveId}`);
+    setStatus(
+      newStep < boardSize ** 2
+        ? winner
+          ? `Winner: ${prevMoveId}`
+          : `Next player: ${moveId}`
+        : 'A draw'
+    );
     setStep(newStep);
   }, [board]);
 
