@@ -26,7 +26,6 @@ const Game = () => {
 
   useEffect(() => {
     const newStep = calcBoardStep(board);
-    console.log('newStep: ', newStep);
 
     const moveId = getMoveId(newStep);
     const prevMoveId = getMoveId(step);
