@@ -2,16 +2,18 @@ import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import './App.scss';
-import Game from './components/Game/Game';
 import Header from './components/Header/Header';
+import GamePage from './pages/GamePage/GamePage';
+import TodoPage from './pages/TodoPage/TodoPage';
 
 const App = () => (
   <div className="App">
     <Header />
     <Routes>
-      <Route exact path="/tic-tac-toe" element={<Game />}></Route>
+      <Route exact path="/game" element={<GamePage />}></Route>
+      <Route exact path="/todo" element={<TodoPage />}></Route>
       <Route path="*" element={<Navigate to="/" replace />} />
-      <Route path="/" element={<Navigate to="/tic-tac-toe" replace />} />
+      <Route path="/" element={<Navigate to="/game" replace />} />
     </Routes>
   </div>
 );
