@@ -34,10 +34,10 @@ const Game = () => {
     const winner = calculateWinner(board, boardSize);
 
     setStatus(
-      newStep < boardSize ** 2
-        ? winner
-          ? `Winner: ${prevMoveId}`
-          : `Next player: ${moveId}`
+      winner
+        ? `Winner: ${prevMoveId}`
+        : newStep < boardSize ** 2
+        ? `Next player: ${moveId}`
         : 'A draw'
     );
     setStep(newStep);
