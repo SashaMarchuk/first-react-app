@@ -4,27 +4,35 @@ import PropTypes from 'prop-types';
 import logo from '../../assets/rocket.png';
 
 import './Header.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <div className="Header">
     <div className="Header__logo">
-      <img src={logo} alt="Logo" className="Header__logo__icon" />
+      <NavLink to="/">
+        <img src={logo} alt="Logo" className="Header__logo__icon" />
+      </NavLink>
     </div>
     <nav className="Header__nav">
       <ul className="Header__nav__list">
         <li className="Header__nav__list__item">
-          <Link to="/">Home</Link>
+          <NavLink activeClassName="active" to="/">
+            Home
+          </NavLink>
         </li>
         <li className="Header__nav__list__item">
-          <Link to="/game">Game</Link>
+          <NavLink activeClassName="active" to="/game">
+            Game
+          </NavLink>
         </li>
         <li className="Header__nav__list__item">
-          <Link to="/todo">ToDo</Link>
+          <NavLink activeClassName="active" to="/todo">
+            ToDo
+          </NavLink>
         </li>
       </ul>
       <div className="Header__nav__login">
-        <Link to="/">Login</Link>
+        <NavLink to="/">Login</NavLink>
       </div>
     </nav>
   </div>

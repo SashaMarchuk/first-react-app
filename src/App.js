@@ -9,12 +9,14 @@ import TodoPage from './pages/TodoPage/TodoPage';
 const App = () => (
   <div className="App">
     <Header />
-    <Routes>
-      <Route exact path="/game" element={<GamePage />}></Route>
-      <Route exact path="/todo" element={<TodoPage />}></Route>
-      <Route path="*" element={<Navigate to="/" replace />} />
-      <Route path="/" element={<Navigate to="/game" replace />} />
-    </Routes>
+    <div className="App-routes">
+      <Routes className="App-routes">
+        <Route exact path="/game" element={<GamePage />}></Route>
+        <Route exact path="/todo" element={<TodoPage />}></Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/" element={<Navigate to="/game" replace />} />
+      </Routes>
+    </div>
   </div>
 );
 

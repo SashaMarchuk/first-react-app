@@ -1,1 +1,58 @@
-.Header {}
+.Header {
+  width: 100wh;
+  display: flex;
+  justify-content: space-between;
+  background: #00000010;
+  padding: 20px;
+  &__logo {
+    margin: auto 0;
+    &__icon {
+      cursor: pointer;
+      width: 35px;
+      height: auto;
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 50%;
+    &__list {
+      display: flex;
+      flex-direction: row;
+      &__item {
+        margin-top: auto;
+        margin-bottom: auto;
+        &:not(:first-child) {
+          margin-left: 15px;
+        }
+        a {
+          border-radius: 5px;
+          padding: 8px 10px;
+        }
+        a.active {
+          background: #00000030;
+        }
+        a,
+        a.active {
+          transition: background-color 0.2s ease;
+          &:hover {
+            background: #00000050;
+          }
+        }
+      }
+    }
+    &__login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        transition: border-color 0.2s ease;
+        border-bottom: 1px solid transparent;
+        &:hover {
+          border-color: black;
+        }
+      }
+    }
+  }
+}
