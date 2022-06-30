@@ -16,17 +16,17 @@ const Header = () => (
     <nav className="Header__nav">
       <ul className="Header__nav__list">
         <li className="Header__nav__list__item">
-          <NavLink activeClassName="active" to="/">
+          <NavLink activeclassname="active" to="/">
             Home
           </NavLink>
         </li>
         <li className="Header__nav__list__item">
-          <NavLink activeClassName="active" to="/game">
+          <NavLink activeclassname="active" to="/game">
             Game
           </NavLink>
         </li>
         <li className="Header__nav__list__item">
-          <NavLink activeClassName="active" to="/todo">
+          <NavLink activeclassname="active" to="/todo">
             ToDo
           </NavLink>
         </li>
