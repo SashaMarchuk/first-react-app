@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './TodoPage.scss';
+import Todo from '../../components/Todo/Todo';
 
 const TodoPage = () => (
   <div className="TodoPage">
-    TodoPage Component
+    <Todo />
   </div>
 );
 
